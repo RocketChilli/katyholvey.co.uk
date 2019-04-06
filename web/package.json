@@ -1,0 +1,15 @@
+{
+  "name": "katy-holvey-proofreading-web",
+  "version": "0.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "Jonathan Holvey",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.4"
+  }
+}
