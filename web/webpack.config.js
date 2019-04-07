@@ -1,5 +1,6 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const LiveReloadPlugin = require('webpack-livereload-plugin')
+const path = require('path')
 
 module.exports = {
   watch: true,
@@ -10,7 +11,7 @@ module.exports = {
   },
 
   output: {
-    path: __dirname + '/app/assets/',
+    path: path.join(__dirname, 'app/assets/'),
     filename: '[name].js',
   },
 
@@ -29,8 +30,8 @@ module.exports = {
           'resolve-url-loader',
           'sass-loader',
         ],
-      }
-    ]
+      },
+    ],
   },
 
   plugins: [
