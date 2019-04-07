@@ -11,8 +11,8 @@ module.exports = {
   },
 
   output: {
-    path: path.join(__dirname, 'app/assets/'),
-    filename: '[name].js',
+    path: path.join(__dirname, 'app/public/'),
+    filename: 'js/[name].js',
   },
 
   module: {
@@ -35,7 +35,7 @@ module.exports = {
   },
 
   plugins: [
-    new MiniCssExtractPlugin({ filename: '[name].css' }),
+    new MiniCssExtractPlugin({ filename: 'css/[name].css' }),
     new LiveReloadPlugin(),
   ],
 }
