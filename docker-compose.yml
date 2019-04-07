@@ -5,7 +5,7 @@ services:
       context: ./web
     restart: always
     volumes:
-      - ./web:/home/node/app
-      - /home/node/app/node_modules
+      - ./web:/home/node
+      - /home/node/node_modules
     ports:
       - 80:3000

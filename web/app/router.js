@@ -1,7 +1,7 @@
 'use strict'
 
 const express = require('express')
-const home = require('./home')
+const home = require('./controllers/home')
 
 const router = express.Router()
 
