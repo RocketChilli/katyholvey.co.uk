@@ -3,6 +3,7 @@ services:
   web:
     build:
       context: ./web
+    container_name: katyholvey-web
     restart: always
     volumes:
       - ./web:/home/node
