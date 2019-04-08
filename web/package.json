@@ -11,7 +11,8 @@
   "license": "UNLICENSED",
   "dependencies": {
     "ejs": "^2.6.1",
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "reset-css": "^4.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.4.3",

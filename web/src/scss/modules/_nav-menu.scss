@@ -1,0 +1,28 @@
+.nav-menu {
+  background: $purple;
+  text-transform: uppercase;
+  letter-spacing: .15em;
+  
+  & > ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  li {
+    border-width: 0 1px;
+    border-color: $overlay-vlight;
+    border-style: solid;
+
+    & + li {
+      border-left: 0;
+    }
+  }
+
+  a {
+    color: $white;
+    display: block;
+    padding: 1.2em 1.5em;
+    text-decoration: none;
+  }
+}

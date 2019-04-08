@@ -1,0 +1,12 @@
+.logo-block {
+  background: $overlay-light; 
+  padding: 2rem;
+
+  svg {
+    width: 100%;
+
+    path {
+      fill: $white;
+    }
+  }
+}

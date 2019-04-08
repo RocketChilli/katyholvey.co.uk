@@ -1,0 +1,34 @@
+.hero-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  .background {
+    display: block;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    position: fixed;
+    z-index: -1;
+    filter: brightness(75%);
+  }
+
+  .logo-block {
+    width: 23em;
+    max-width: 85%;
+    position: relative;
+    top: -.5rem;
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1rem;
+    background: $overlay-light;
+  }
+}
