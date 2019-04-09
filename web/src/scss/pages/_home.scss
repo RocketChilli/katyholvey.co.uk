@@ -6,6 +6,11 @@
 
   .intro > .container {
     @extend %cols-8-4;
+
+    & > .cta-button {
+      justify-self: end;
+      align-self: center;
+    }
   }
 
   .bio > .container {
