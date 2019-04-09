@@ -1,0 +1,15 @@
+section {
+  padding: $gutter * 2;    
+
+  &.-light {
+    background: $white;
+  }
+
+  &.-medium {
+    background: $light-grey;
+  }
+
+  &.-dark {
+    background: $dark-grey;
+  }
+}

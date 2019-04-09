@@ -16,6 +16,23 @@ $container-widths: (
   display: grid;
   margin-left: auto;
   margin-right: auto;
+  grid-gap: $gutter;
+}
+
+%cols-8-4 {
+  grid-template-columns: 8fr 4fr;
+}
+
+%cols-6-6 {
+  grid-template-columns: 6fr 6fr;
+}
+
+%cols-3-9 {
+  grid-template-columns: 3fr 9fr;
+}
+
+%cols-1-11 {
+  grid-template-columns: 1fr 11fr;
 }
 
 @each $name, $width in $breakpoints {
@@ -25,3 +42,8 @@ $container-widths: (
     }
   }
 }
+
+$break-sm: get-map($breakpoints, 'sm');
+$break-md: get-map($breakpoints, 'md');
+$break-lg: get-map($breakpoints, 'lg');
+$break-xl: get-map($breakpoints, 'xl');

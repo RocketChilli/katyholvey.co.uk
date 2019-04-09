@@ -3,4 +3,24 @@
     width: 100%;
     height: 90vh;
   } 
+
+  .intro > .container {
+    @extend %cols-8-4;
+  }
+
+  .bio > .container {
+    @extend %cols-3-9;
+  }
+
+  .about > .container {
+    @extend %cols-6-6;
+  }
+
+  .quote > .container {
+    @extend %cols-1-11;
+  }
+
+  .services > .container {
+    
+  }
 }
