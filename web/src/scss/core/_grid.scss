@@ -16,7 +16,7 @@ $container-widths: (
   display: grid;
   margin-left: auto;
   margin-right: auto;
-  grid-gap: $gutter;
+  grid-gap: $grid-gutter;
 }
 
 %cols-8-4 {

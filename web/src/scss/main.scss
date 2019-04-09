@@ -1,8 +1,10 @@
 @import '~reset-css';
 
-@import 'core/fonts';
 @import 'core/variables';
+@import 'core/colours';
+@import 'core/fonts';
 @import 'core/defaults';
+@import 'core/text';
 @import 'core/grid';
 
 @import 'modules/index';

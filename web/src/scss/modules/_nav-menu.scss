@@ -1,12 +1,14 @@
 .nav-menu {
   background: $purple;
   text-transform: uppercase;
-  letter-spacing: .15em;
   
   & > ul {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    font-size: $text-default;
+    letter-spacing: .15em;
+
   }
 
   li {
@@ -22,7 +24,7 @@
   a {
     color: $white;
     display: block;
-    padding: 1.2em 1.5em;
+    padding: 1.1em 1.5em;
     text-decoration: none;
   }
 }

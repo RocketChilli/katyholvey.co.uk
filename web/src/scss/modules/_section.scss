@@ -1,5 +1,5 @@
 section {
-  padding: $gutter * 2;    
+  padding: $grid-gutter * 4;    
 
   &.-light {
     background: $white;
@@ -11,5 +11,11 @@ section {
 
   &.-dark {
     background: $dark-grey;
+
+    p,
+    ol,
+    ul {
+      color: $light-grey;
+    }
   }
 }

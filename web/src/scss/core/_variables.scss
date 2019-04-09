@@ -1,11 +1,10 @@
-$white: #fff;
-$black: #000;
-$purple: #5f5b7b;
-$light-grey: #e0e0e2;
-$dark-grey: #3a3f32;
+$grid-gutter: 1.5rem;
 
-$overlay-light: rgba($white, .22);
-$overlay-vlight: rgba($white, .10);
-$overlay-dark: rgba($black, .22);
+$text-default: 16px;
+$text-scale: 1.3;
 
-$gutter: 1.5rem;
+$text-sm: 1rem;
+$text-xs: $text-sm / $text-scale;
+$text-md: $text-sm * $text-scale;
+$text-lg: $text-md * $text-scale;
+$text-xl: $text-lg * $text-scale;
