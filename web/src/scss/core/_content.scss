@@ -17,6 +17,7 @@ main {
     list-style-type: none;
 
     li {
+      padding-left: 1.7em;
       text-indent: -1.2em;
 
       &::before {
@@ -43,5 +44,9 @@ main {
 
   li + li {
     margin-top: $grid-gutter * .8;
+  }
+
+  img {
+    border-radius: $box-radius;
   }
 }

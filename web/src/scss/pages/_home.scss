@@ -9,7 +9,6 @@
 
     & > .cta-button {
       justify-self: end;
-      align-self: center;
     }
   }
 
@@ -30,7 +29,6 @@
 
     .symbol-group {
       font-size: $text-xxxl;
-      align-self: center;
       color: $light-grey;
     }
 
@@ -41,7 +39,7 @@
 
   .services {
     h1 {
-      text-align: center;
+      align-self: center;
     }
 
     ul {

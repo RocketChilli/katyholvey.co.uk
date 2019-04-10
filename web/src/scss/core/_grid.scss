@@ -14,13 +14,13 @@ $container-widths: (
 
 .container {
   display: grid;
-  grid-gap: $grid-gutter;
+  grid-gap: $grid-gutter * 2;
+  justify-content: start;
+  align-items: center;
 
   & > * {
     display: flex;
     flex-direction: column;
-    justify-self: start;
-    align-self: start;
   }
 }
 
