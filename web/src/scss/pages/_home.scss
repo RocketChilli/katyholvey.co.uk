@@ -39,7 +39,14 @@
     }
   }
 
-  .services > .container {
-    
+  .services {
+    h1 {
+      text-align: center;
+    }
+
+    ul {
+      margin-top: $grid-gutter * 3;
+      columns: 2;
+    }
   }
 }

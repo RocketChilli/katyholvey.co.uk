@@ -1,24 +1,47 @@
-h1 {
-  font-size: $text-xxl;
-  color: $purple;
-}
+main {
+  h1 {
+    font-size: $text-xxl;
+    color: $purple;
+  }
 
-p,
-ol,
-ul {
-  font-size: $text-md;
-  line-height: 1.5;
-  letter-spacing: .05em;
-  color: $dark-grey;
-}
+  p,
+  ol,
+  ul {
+    font-size: $text-md;
+    line-height: 1.5;
+    letter-spacing: .05em;
+    color: $dark-grey;
+  }
 
-h1,
-h2,
-h3,
-p,
-ol,
-ul {
-  + * {
-    margin-top: $grid-gutter * 1.5;
+  ul {
+    list-style-type: none;
+
+    li {
+      text-indent: -1.2em;
+
+      &::before {
+        content: '\2014';
+        font-weight: 400;
+        color: $purple;
+        position: relative;
+        left: -.5em;
+      }
+    }
+
+  }
+
+  h1,
+  h2,
+  h3,
+  p,
+  ol,
+  ul {
+    + * {
+      margin-top: $grid-gutter * 1.5;
+    }
+  }
+
+  li + li {
+    margin-top: $grid-gutter * .8;
   }
 }
