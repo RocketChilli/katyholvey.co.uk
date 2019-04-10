@@ -1,0 +1,22 @@
+.section-image {
+  position: absolute;
+  width: calc(50% - #{$grid-gutter});
+  height: 100%;
+  overflow: hidden;
+  top: 0;
+
+  &.-right {
+    right: 0;
+  }
+
+  &.-left {
+    left: 0;
+  }
+
+  > img {
+    border-radius: 0;
+    object-fit: cover;
+    min-width: 100%;
+    min-height: 100%;
+  }
+}

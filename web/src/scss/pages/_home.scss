@@ -7,7 +7,7 @@
   .intro > .container {
     @extend %cols-8-4;
 
-    & > .cta-button {
+    > .cta-button {
       justify-self: end;
     }
   }
