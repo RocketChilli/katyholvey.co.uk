@@ -17,6 +17,8 @@ $container-widths: (
   grid-gap: $grid-gutter;
 
   & > * {
+    display: flex;
+    flex-direction: column;
     justify-self: start;
     align-self: start;
   }

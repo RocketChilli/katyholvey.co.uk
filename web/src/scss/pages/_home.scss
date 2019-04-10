@@ -19,6 +19,10 @@
 
   .about > .container {
     @extend %cols-6-6;
+
+    .cta-button {
+      align-self: center;
+    }
   }
 
   .quote > .container {
