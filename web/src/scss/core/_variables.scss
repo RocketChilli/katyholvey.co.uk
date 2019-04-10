@@ -3,11 +3,12 @@ $grid-gutter: 1.5rem;
 $box-radius: .5rem;
 
 $text-default: 16px;
-$text-scale: 1.25;
+$text-scale: 1.2;
 
-$text-sm: 1rem;
-$text-xs: $text-sm / $text-scale;
+$text-xs: 1rem;
+$text-sm: $text-xs * $text-scale;
 $text-md: $text-sm * $text-scale;
 $text-lg: $text-md * $text-scale;
 $text-xl: $text-lg * $text-scale;
 $text-xxl: $text-xl * $text-scale;
+$text-xxxl: $text-xxl * $text-scale;

@@ -27,6 +27,16 @@
 
   .quote > .container {
     @extend %cols-1-11;
+
+    .symbol-group {
+      font-size: $text-xxxl;
+      align-self: center;
+      color: $light-grey;
+    }
+
+    p {
+      font-size: $text-sm;
+    }
   }
 
   .services > .container {
