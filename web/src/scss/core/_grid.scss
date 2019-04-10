@@ -14,14 +14,19 @@ $container-widths: (
 
 .container {
   display: grid;
-  margin-left: auto;
-  margin-right: auto;
   grid-gap: $grid-gutter;
 
   & > * {
     justify-self: start;
     align-self: start;
   }
+}
+
+.container,
+%container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
 }
 
 %cols-8-4 {
@@ -42,7 +47,8 @@ $container-widths: (
 
 @each $name, $width in $breakpoints {
   @media (min-width: $width) {
-    .container {
+    .container,
+    %container {
       max-width: map-get($container-widths, $name);
     }
   }

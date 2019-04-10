@@ -1,5 +1,6 @@
 section {
   padding: $grid-gutter * 4;    
+  position: relative;
 
   &.-light {
     background: $white;
@@ -17,5 +18,17 @@ section {
     ul {
       color: $light-grey;
     }
+  }
+}
+
+section.-light + section.-light,
+section.-medium + section.-medium {
+  &::before {
+    @extend %container;
+    content: '';
+    display: block;
+    border-top: 2px solid $purple;
+    position: relative;
+    top: $grid-gutter * -4;
   }
 }
