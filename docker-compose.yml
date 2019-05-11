@@ -1,13 +1,22 @@
 version: '3.6'
+
+networks:
+  default:
+    name: localdev
+
 services:
   web:
     build:
       context: ./web
     container_name: katyholvey-web
-    restart: always
+    networks:
+      - default
     volumes:
       - ./web:/home/node
       - /home/node/node_modules
     ports:
-      - 80:3000
+      - 3000
       - 35729:35729
+    environment:
+      VIRTUAL_HOST: local.katyholvey.co.uk
+      VIRTUAL_PORT: 3000
