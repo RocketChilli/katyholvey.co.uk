@@ -5,6 +5,7 @@
   "main": "app.js",
   "scripts": {
     "start": "node app/server.js",
+    "build": "webpack --mode production",
     "dev": "webpack"
   },
   "author": "Jonathan Holvey",

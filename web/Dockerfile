@@ -4,6 +4,8 @@ WORKDIR /home/node
 COPY package*.json ./
 RUN npm install
 
-COPY app ./
+COPY src ./src/
+RUN npm run dev
 
+COPY app ./app/
 CMD npm start
