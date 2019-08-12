@@ -6,8 +6,8 @@ $breakpoints: (
 );
 
 $container-widths: (
-  sm: 540px,
-  md: 640px,
+  sm: 580px,
+  md: 660px,
   lg: 790px,
   xl: 970px,
 );
@@ -56,7 +56,7 @@ $container-widths: (
   }
 }
 
-$break-sm: get-map($breakpoints, 'sm');
-$break-md: get-map($breakpoints, 'md');
-$break-lg: get-map($breakpoints, 'lg');
-$break-xl: get-map($breakpoints, 'xl');
+$break-sm: map-get($breakpoints, 'sm');
+$break-md: map-get($breakpoints, 'md');
+$break-lg: map-get($breakpoints, 'lg');
+$break-xl: map-get($breakpoints, 'xl');

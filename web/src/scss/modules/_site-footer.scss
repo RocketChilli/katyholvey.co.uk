@@ -37,4 +37,18 @@
     height: 1rem;
     background: $overlay-light;
   }
+
+  @media (max-width: $break-lg) {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: $grid-gutter;
+
+    .text {
+      order: 3;
+      text-align: center;
+      grid-column: span 2;
+      align-self: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
 }
