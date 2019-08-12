@@ -1,0 +1,17 @@
+.social-icons {
+  display: flex;
+  align-items: center;
+
+  li + li {
+    margin-left: $grid-gutter;
+  }
+
+  svg {
+    max-width: 1.3rem;
+    max-height: 1.3rem;
+
+    path {
+      fill: $white;
+    }
+  }
+}
