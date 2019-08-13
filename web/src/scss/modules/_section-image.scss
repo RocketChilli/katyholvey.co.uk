@@ -19,4 +19,13 @@
     min-width: 100%;
     min-height: 100%;
   }
+
+  @media (max-width: $break-lg) {
+    position: static;
+    width: auto;
+    margin: $grid-gutter * -5;
+    margin-top: $grid-gutter * 5;
+    height: 0;
+    padding-bottom: 80%;
+  }
 }

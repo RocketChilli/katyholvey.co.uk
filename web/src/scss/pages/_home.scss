@@ -22,6 +22,10 @@
     .cta-button {
       align-self: center;
     }
+
+    @media (max-width: $break-lg) {
+      grid-template-columns: 1fr;
+    }
   }
 
   .quote > .container {
@@ -45,6 +49,10 @@
     ul {
       margin-top: $grid-gutter * 3;
       columns: 2;
+
+      @media (max-width: $break-lg) {
+        columns: 1;
+      }
     }
   }
 
