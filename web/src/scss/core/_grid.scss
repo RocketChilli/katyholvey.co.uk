@@ -1,16 +1,30 @@
 $breakpoints: (
-  sm: 600px,
-  md: 700px,
+  sm: 700px,
+  md: 800px,
   lg: 900px,
   xl: 1100px,
 );
 
 $container-widths: (
-  sm: 580px,
-  md: 660px,
-  lg: 790px,
-  xl: 970px,
+  sm: 900px,
+  md: 900px,
+  lg: 900px,
+  xl: 900px,
 );
+
+@each $name, $width in $breakpoints {
+  @media (min-width: $width) {
+    .container,
+    %container {
+      max-width: map-get($container-widths, $name);
+    }
+  }
+}
+
+$break-sm: map-get($breakpoints, 'sm');
+$break-md: map-get($breakpoints, 'md');
+$break-lg: map-get($breakpoints, 'lg');
+$break-xl: map-get($breakpoints, 'xl');
 
 .container {
   display: grid;
@@ -47,16 +61,15 @@ $container-widths: (
   grid-template-columns: 1fr 11fr;
 }
 
-@each $name, $width in $breakpoints {
-  @media (min-width: $width) {
-    .container,
-    %container {
-      max-width: map-get($container-widths, $name);
-    }
+%cols-6-6 {
+  @media (max-width: $break-lg) {
+    grid-template-columns: 1fr;
   }
 }
 
-$break-sm: map-get($breakpoints, 'sm');
-$break-md: map-get($breakpoints, 'md');
-$break-lg: map-get($breakpoints, 'lg');
-$break-xl: map-get($breakpoints, 'xl');
+%cols-8-4,
+%cols-3-9 {
+  @media (max-width: $break-md) {
+    grid-template-columns: 1fr;
+  }
+}

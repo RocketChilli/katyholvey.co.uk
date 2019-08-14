@@ -9,11 +9,21 @@
 
     > .cta-button {
       justify-self: end;
+
+      @media (max-width: $break-md) {
+        justify-self: center;
+      }
     }
   }
 
   .bio > .container {
     @extend %cols-3-9;
+
+    img {
+      @media (max-width: $break-md) {
+        justify-self: center;
+      }
+    }
   }
 
   .about > .container {
@@ -21,10 +31,6 @@
 
     .cta-button {
       align-self: center;
-    }
-
-    @media (max-width: $break-lg) {
-      grid-template-columns: 1fr;
     }
   }
 
