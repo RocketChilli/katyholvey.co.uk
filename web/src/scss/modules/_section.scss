@@ -26,8 +26,8 @@ main > section {
   }
 
   @media (max-width: $break-md) {
-    padding-left: $grid-gutter * 3;
-    padding-right: $grid-gutter * 3;
+    padding-left: $grid-gutter * 3.5;
+    padding-right: $grid-gutter * 3.5;
   }
 
   @media (max-width: $break-sm) {
