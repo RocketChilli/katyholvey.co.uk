@@ -48,4 +48,12 @@ section.-medium + section.-medium {
     margin-top: $grid-gutter * -1;
     margin-bottom: $grid-gutter * -1;
   }
+
+  @media (max-width: $break-xs) {
+    padding-top: 0;
+
+    &::before {
+      display: none;
+    }
+  }
 }
