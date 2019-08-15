@@ -12,7 +12,8 @@
   "dependencies": {
     "ejs": "^2.6.1",
     "express": "^4.16.4",
-    "reset-css": "^4.0.1"
+    "reset-css": "^4.0.1",
+    "scroll-parallax": "https://github.com/JonathanHolvey/parallax/tarball/non-media"
   },
   "devDependencies": {
     "@babel/core": "^7.4.3",
