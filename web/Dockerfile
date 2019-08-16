@@ -7,4 +7,5 @@ RUN npm install --prod
 COPY ./ ./
 RUN ls -l && npm run build
 
+EXPOSE 80
 CMD npm start
