@@ -5,29 +5,30 @@
   "main": "app.js",
   "scripts": {
     "start": "node app/server.js",
+    "build": "webpack --mode production",
     "dev": "webpack"
   },
   "author": "Jonathan Holvey",
   "license": "UNLICENSED",
   "dependencies": {
-    "ejs": "^2.6.1",
-    "express": "^4.16.4",
-    "reset-css": "^4.0.1",
-    "scroll-parallax": "https://github.com/JonathanHolvey/parallax/tarball/non-media"
-  },
-  "devDependencies": {
     "@babel/core": "^7.4.3",
     "babel-loader": "^8.0.5",
     "css-loader": "^2.1.1",
-    "eslint": "^5.16.0",
-    "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-plugin-import": "^2.16.0",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
     "mini-css-extract-plugin": "^0.5.0",
     "node-sass": "^4.11.0",
+    "reset-css": "^4.0.1",
     "resolve-url-loader": "^3.1.0",
     "sass-loader": "^7.1.0",
+    "scroll-parallax": "https://github.com/JonathanHolvey/parallax/tarball/non-media",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.3.0",
     "webpack-livereload-plugin": "^2.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0"
   }
 }
