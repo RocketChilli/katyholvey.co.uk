@@ -55,7 +55,7 @@
   @media (max-width: $break-xs) {
     grid-template-columns: 1fr;
     grid-gap: $grid-gutter * 2;
-    padding: $grid-gutter * 2;
+    padding: $grid-gutter * 2 $grid-gutter;
     padding-bottom: calc(#{$grid-gutter} * 2 + 1rem);
 
     .text,
