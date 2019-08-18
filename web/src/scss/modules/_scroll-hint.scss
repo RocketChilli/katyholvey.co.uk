@@ -1,0 +1,26 @@
+.scroll-hint {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: $text-xs;
+  color: $white;
+  font-weight: 400;
+  text-decoration: none;
+  text-align: center;
+  line-height: 1.2;
+  background: $overlay-light;
+  padding: .5em .8em;
+  border-top-right-radius: $box-radius;
+  border-top-left-radius: $box-radius;
+
+   &::after {
+    content: '';
+    display: block;
+    width: 1.2rem;
+    height: 1.2rem;
+    border: 2px solid rgba($white, .8);
+    border-top: 0;
+    border-left: 0;
+    transform: rotate(45deg);
+   } 
+}
