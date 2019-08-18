@@ -31,6 +31,7 @@ main > section {
   }
 
   @media (max-width: $break-sm) {
+    padding: $grid-gutter * 3;
     padding-left: $grid-gutter * 2;
     padding-right: $grid-gutter * 2;
   }
