@@ -9,6 +9,14 @@
   border: 0;
   border-radius: $box-radius;
   min-width: 8em;
-  padding: .6em 1.2em;
+  padding: .6em 1em;
   box-shadow: 0 .07rem .2rem .1rem $shadow;
+
+  &.-light {
+    background: $light-grey;
+    color: $purple;
+    border: 2px solid $purple;
+    box-shadow: none;
+    padding: .5em 1em;
+  }
 }
