@@ -10,8 +10,9 @@ const links = document.querySelectorAll('a[href^="#"]')
 links.forEach((link) => {
   link.addEventListener('click', (event) => {
     event.preventDefault()
-    const href = event.target.getAttribute('href')
-    scrollToElement(href, { ease: 'inOutSine' })
+    const hash = event.target.getAttribute('href')
+    scrollToElement(hash, { ease: 'inOutSine' })
+    window.location = hash
   })
 })
 
