@@ -18,7 +18,7 @@ links.forEach((link) => {
 
 // Show scroll hint on home page
 const scrollHint = document.querySelector('.scroll-hint')
-if (scrollHint) {
+if (scrollHint && !window.scrollY) {
   const scrollHintDelay = setTimeout(() => {
     scrollHint.classList.remove('-hidden')
   }, 3000)
