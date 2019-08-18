@@ -3,7 +3,7 @@ body {
   font-family: Merriweather;
   font-weight: 300;
   font-size: $text-default;
-  min-width: 450px;
+  min-width: 350px;
 
   @media (max-width: $break-sm) {
     font-size: $text-mobile;

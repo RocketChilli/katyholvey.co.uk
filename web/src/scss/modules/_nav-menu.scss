@@ -5,6 +5,7 @@
   & > ul {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     letter-spacing: .15em;
 
@@ -20,13 +21,7 @@
     }
 
     @media (max-width: $break-xs) {
-      &:first-child {
-        border-left: 0;
-      }
-
-      &:last-child {
-        border-right: 0;
-      }
+      border: 0;
     }
   }
 
@@ -35,5 +30,9 @@
     display: block;
     padding: 1.3em 1.5em;
     text-decoration: none;
+
+    @media (max-width: $break-xs) {
+      padding: 1.3em .5em;
+    }
   }
 }
