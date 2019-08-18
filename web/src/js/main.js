@@ -14,3 +14,16 @@ links.forEach((link) => {
     scrollToElement(href, { ease: 'inOutSine' })
   })
 })
+
+// Show scroll hint on home page
+const scrollHint = document.querySelector('.scroll-hint')
+if (scrollHint) {
+  const scrollHintDelay = setTimeout(() => {
+    scrollHint.classList.remove('-hidden')
+  }, 3000)
+  // Disable hint on scroll if not already shown
+  window.addEventListener('scroll', function callback(event) {
+    clearTimeout(scrollHintDelay)
+    event.target.removeEventListener('scroll', callback)
+  })
+}

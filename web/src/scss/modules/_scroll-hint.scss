@@ -8,12 +8,9 @@
   text-decoration: none;
   text-align: center;
   line-height: 1.2;
-  background: $overlay-light;
-  padding: .5em .8em;
-  border-top-right-radius: $box-radius;
-  border-top-left-radius: $box-radius;
+  transition: opacity 500ms, transform 500ms;
 
-   &::after {
+  &::after {
     content: '';
     display: block;
     width: 1.2rem;
@@ -22,5 +19,11 @@
     border-top: 0;
     border-left: 0;
     transform: rotate(45deg);
-   } 
+  } 
+
+  &.-hidden {
+    opacity: 0;
+    transform: translateY(-.5rem);
+    pointer-events: none;
+  }
 }
