@@ -28,7 +28,6 @@ main {
         left: -.5em;
       }
     }
-
   }
 
   h1,
@@ -48,5 +47,32 @@ main {
 
   img {
     border-radius: $box-radius;
+  }
+
+  .-small {
+    p,
+    ol,
+    ul {
+      font-size: $text-sm;
+    }
+
+    h1 {
+      font-size: $text-lg
+    }
+
+    h1,
+    h2,
+    h3,
+    p,
+    ol,
+    ul {
+      + * {
+        margin-top: $grid-gutter * .4;
+      }
+    }
+
+    li + li {
+      margin-top: $grid-gutter * .8;
+    }
   }
 }

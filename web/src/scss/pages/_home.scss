@@ -7,10 +7,10 @@
   .intro > .container {
     @extend %cols-8-4;
 
-    > .cta-button {
+    .cta-button {
       justify-self: end;
 
-      @media (max-width: $break-md) {
+      @media (max-width: $break-lg) {
         justify-self: center;
       }
     }
@@ -18,6 +18,11 @@
 
   .bio > .container {
     @extend %cols-3-9;
+
+    .cta-button {
+      margin-left: auto;
+      margin-right: auto;
+    }
 
     img {
       @media (max-width: $break-md) {
@@ -40,10 +45,6 @@
     .symbol-group {
       font-size: $text-xxxl;
       color: $light-grey;
-    }
-
-    p {
-      font-size: $text-sm;
     }
   }
 

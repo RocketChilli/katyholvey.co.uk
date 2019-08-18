@@ -48,15 +48,21 @@ $break-xl: map-get($breakpoints, 'xl');
   grid-template-columns: 1fr 11fr;
 }
 
+%cols-8-4,
 %cols-6-6 {
   @media (max-width: $break-lg) {
     grid-template-columns: 1fr;
   }
 }
 
-%cols-8-4,
 %cols-3-9 {
   @media (max-width: $break-md) {
+    grid-template-columns: 1fr;
+  }
+}
+
+%cols-1-11 {
+  @media (max-width: $break-xs) {
     grid-template-columns: 1fr;
   }
 }
