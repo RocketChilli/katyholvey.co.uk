@@ -11,6 +11,10 @@
 
   button {
     margin-left: auto;
+
+    @media (max-width: $break-xs) {
+      margin: auto;
+    }
   }
 
   @media (max-width: $break-lg) {

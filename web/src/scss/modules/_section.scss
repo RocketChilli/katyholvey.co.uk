@@ -50,7 +50,7 @@ section.-medium + section.-medium {
     margin-bottom: $grid-gutter * -1;
   }
 
-  @media (max-width: $break-xs) {
+  @media (max-width: $break-sm) {
     padding-top: 0;
 
     &::before {
