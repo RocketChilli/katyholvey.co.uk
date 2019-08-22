@@ -5,8 +5,8 @@
   "main": "app.js",
   "scripts": {
     "start": "node app/server.js",
-    "build": "webpack --mode production",
-    "dev": "webpack"
+    "build": "webpack",
+    "dev": "webpack --mode development"
   },
   "author": "Jonathan Holvey",
   "license": "UNLICENSED",
