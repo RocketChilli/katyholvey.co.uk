@@ -3,7 +3,7 @@ const LiveReloadPlugin = require('webpack-livereload-plugin')
 const path = require('path')
 
 module.exports = (env, argv) => {
-  const mode = argv.mode || 'development'
+  const mode = argv.mode || 'production'
   return {
     mode,
     watch: mode === 'development',
