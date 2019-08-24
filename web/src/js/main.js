@@ -35,6 +35,8 @@ const contactForm = document.querySelector('.contact-form')
 if (contactForm) {
   contactForm.addEventListener('submit', (event) => {
     event.preventDefault()
+    event.target.classList.add('-sending')
+
     const data = {
       name: event.target.querySelector('[name="name"]').value,
       phone: event.target.querySelector('[name="phone"]').value,
@@ -47,5 +49,12 @@ if (contactForm) {
       data,
       headers: { 'Content-type': 'application/json' },
     })
+      .catch(error => error)
+      .then((result) => {
+        contactForm.classList.remove('-sending')
+        if (result.statusText === 'OK') {
+          contactForm.reset()
+        }
+      })
   })
 }

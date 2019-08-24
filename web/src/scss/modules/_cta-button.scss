@@ -19,4 +19,33 @@
     box-shadow: none;
     padding: .5em 1em;
   }
+
+  .busy {
+    display: none;
+  }
+}
+
+form.-sending .cta-button {
+  position: relative;
+  display: flex;
+
+  .label {
+    opacity: 0;
+  }
+
+  .busy {
+    position: absolute;
+    display: inline-block;
+    padding-left: 2em;
+
+    &::before {
+      @extend %loading-icon;
+      border-top-color: $white;
+      border-bottom-color: $white;
+      content: '';
+      display: inline-block;
+      width: 1em;
+      height: 1em;
+    }
+  }
 }
