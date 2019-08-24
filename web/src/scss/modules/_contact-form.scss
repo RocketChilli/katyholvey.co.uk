@@ -20,6 +20,7 @@
 
   .message {
     position: absolute;
+    z-index: 1;
     top: calc(100% + #{$grid-gutter} / 2);
     left: 0;
     width: 100%;
