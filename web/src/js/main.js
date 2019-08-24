@@ -13,7 +13,10 @@ links.forEach((link) => {
     event.preventDefault()
     const hash = event.target.getAttribute('href')
     scrollToElement(hash, { ease: 'inOutSine' })
-    window.location = hash
+
+    if (!event.target.hasAttribute('data-no-url')) {
+      window.location = hash
+    }
   })
 })
 
