@@ -12,3 +12,5 @@ services:
       - 35729:35729
     environment:
       VIRTUAL_HOST: local.katyholvey.co.uk
+      SENDGRID_API_KEY: ${SENDGRID_API_KEY}
+      CONTACT_EMAIL: ${CONTACT_EMAIL}
