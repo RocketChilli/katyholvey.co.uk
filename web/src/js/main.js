@@ -38,10 +38,10 @@ if (contactForm) {
     event.target.classList.add('-sending')
 
     const data = {
-      name: event.target.querySelector('[name="name"]').value,
-      phone: event.target.querySelector('[name="phone"]').value,
-      email: event.target.querySelector('[name="email"]').value,
-      message: event.target.querySelector('[name="message"]').value,
+      name: contactForm.querySelector('[name="name"]').value,
+      phone: contactForm.querySelector('[name="phone"]').value,
+      email: contactForm.querySelector('[name="email"]').value,
+      message: contactForm.querySelector('[name="message"]').value,
     }
     axios({
       url: '/mailer',
@@ -51,10 +51,20 @@ if (contactForm) {
     })
       .catch(error => error)
       .then((result) => {
+        // Get status and reset form
         contactForm.classList.remove('-sending')
+        let status = 'error'
         if (result.statusText === 'OK') {
+          status = 'success'
           contactForm.reset()
         }
+
+        // Provide feedback after sending message
+        const message = contactForm.querySelector(`.message .${status}`)
+        message.classList.add('-visible')
+        setTimeout(() => {
+          message.classList.remove('-visible')
+        }, 3000)
       })
   })
 }

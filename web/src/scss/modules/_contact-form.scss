@@ -18,6 +18,22 @@
     }
   }
 
+  .message {
+    position: absolute;
+    top: calc(100% + #{$grid-gutter} / 2);
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    p {
+      @extend .alert-message;
+      position: absolute;
+      text-align: center;
+      margin: 0;
+    }
+  }
+
   @media (max-width: $break-lg) {
     columns: 1;
   }
