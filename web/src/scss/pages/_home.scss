@@ -44,8 +44,8 @@
     @extend %cols-1-11;
 
     .symbol-group {
-      font-size: $text-xxxl;
-      color: $light-grey;
+      width: 100%;
+      fill: $light-grey;
     }
   }
 
