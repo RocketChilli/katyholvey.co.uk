@@ -5,10 +5,15 @@
   color: $purple;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 1s, visibility 0s;
+  transition: opacity 500ms, visibility 0s linear 500ms;
 
   &.-visible {
     opacity: 1;
     visibility: visible;
+    transition: opacity 500ms, visibility 0s;
+  }
+
+  @media (max-width: $break-md) {
+    font-size: $text-sm;
   }
 }
