@@ -2,6 +2,15 @@ import Parallax from 'scroll-parallax'
 import scrollToElement from 'scroll-to-element'
 import axios from 'axios'
 
+// Use initial viewport height for mobile browsers
+const vh = window.innerHeight / 100
+document.documentElement.style.setProperty('--vh', `${vh}px`)
+/* FIXME: The header layout breaks when loaded on a landscape
+   mobile device before switching to portrait. This can't be fixed
+   using a resize event listener, as the event also fires when the
+   mobile browser's navigation bar moves in and out of the viewport
+   when you scroll. */
+
 // Add parallax effect to header image
 const options = { intensity: 50 }
 new Parallax('.parallax', options).init()
