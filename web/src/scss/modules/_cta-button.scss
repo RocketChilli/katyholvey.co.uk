@@ -10,7 +10,7 @@
   border-radius: $box-radius;
   min-width: 8em;
   padding: .6em 1em;
-  box-shadow: 0 .07rem .2rem .1rem $shadow;
+  box-shadow: 0 .07rem .5rem 0 $shadow-dark;
 
   &.-light {
     background: $light-grey;
