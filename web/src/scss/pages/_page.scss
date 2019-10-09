@@ -1,0 +1,14 @@
+.page {
+  background: $light-grey;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+
+  .site-footer {
+    margin-top: auto;
+  }
+
+  .cta-button {
+    width: 13em;
+  }
+}

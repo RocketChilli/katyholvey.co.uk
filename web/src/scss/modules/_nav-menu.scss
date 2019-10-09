@@ -1,13 +1,24 @@
 .nav-menu {
-  background: $purple;
   text-transform: uppercase;
-  
+  letter-spacing: .15em;
+
   & > ul {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+  }
+
+  a {
+    text-decoration: none;
+    display: block;
+  }
+}
+
+.homepage .nav-menu {
+  background: $purple;
+  
+  & > ul {
     justify-content: center;
-    letter-spacing: .15em;
   }
 
   li {
@@ -26,12 +37,20 @@
 
   a {
     color: $white;
-    display: block;
     padding: 1.3em 1.5em;
-    text-decoration: none;
 
     @media (max-width: $break-xs) {
       padding: 1.3em .5em;
     }
+  }
+}
+
+.page .nav-menu {
+  a {
+    color: $purple;
+  }
+
+  li + li {
+    margin-left: 1.5em;
   }
 }
