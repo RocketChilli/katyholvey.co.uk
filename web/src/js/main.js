@@ -16,6 +16,7 @@ const options = { intensity: 50 }
 new Parallax('.parallax', options).init()
 
 // Add scrolling effect to in-page links
+// FIXME: This doesn't work for links that include the page path
 const links = document.querySelectorAll('a[href^="#"]')
 links.forEach((link) => {
   link.addEventListener('click', (event) => {
