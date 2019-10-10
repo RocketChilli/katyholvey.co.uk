@@ -1,0 +1,19 @@
+.page.blog {
+  .symbols {
+    margin-bottom: -2rem;
+    margin-left: 2rem;
+
+    svg {
+      width: 16rem;
+      height: auto;
+
+      path {
+        fill: $light-grey;
+      }
+    }
+  }
+
+  .cta-button {
+    margin-left: auto;
+  }
+}

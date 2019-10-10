@@ -9,6 +9,19 @@
   }
 
   .cta-button {
-    width: 13em;
+    width: 12em;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  article {
+    margin: 5rem auto;
+
+    .title {
+      margin-left: 3rem;
+      margin-bottom: 1rem;
+    }
   }
 }
