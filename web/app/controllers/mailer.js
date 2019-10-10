@@ -5,7 +5,7 @@ const controller = (req, res) => {
   const message = {
     to: process.env.CONTACT_EMAIL,
     from: `${req.body.name} <${req.body.email}>`,
-    subject: 'Message from contact form',
+    subject: 'Message from Proofreading',
     text: `${req.body.message}\n\nName: ${req.body.name}\nEmail: ${req.body.email}\nPhone: ${req.body.phone}`,
   }
 
