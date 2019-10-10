@@ -11,6 +11,7 @@
   .logo {
     svg {
       width: 12rem;
+      height: auto;
 
       path {
         fill: $white;
@@ -44,9 +45,7 @@
 
     .text {
       order: 3;
-      text-align: center;
       grid-column: span 2;
-      align-self: center;
       margin-left: auto;
       margin-right: auto;
     }
