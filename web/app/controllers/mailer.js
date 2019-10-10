@@ -1,7 +1,7 @@
-const sendGrid = require('@sendgrid/mail')
+const sendgrid = require('@sendgrid/mail')
 
 const controller = (req, res) => {
-  sendGrid.setApiKey(process.env.SENDGRID_API_KEY)
+  sendgrid.setApiKey(process.env.SENDGRID_API_KEY)
   const message = {
     to: process.env.CONTACT_EMAIL,
     from: `${req.body.name} <${req.body.email}>`,
@@ -9,7 +9,7 @@ const controller = (req, res) => {
     text: `${req.body.message}\n\nName: ${req.body.name}\nEmail: ${req.body.email}\nPhone: ${req.body.phone}`,
   }
 
-  sendGrid.send(message)
+  sendgrid.send(message)
     .then(() => {
       res.sendStatus(200)
     })

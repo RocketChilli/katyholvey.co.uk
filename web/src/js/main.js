@@ -67,7 +67,7 @@ if (contactForm) {
         // Get status and reset form
         contactForm.classList.remove('-sending')
         let status = 'error'
-        if (result.statusText === 'OK') {
+        if (result.status === 200) {
           status = 'success'
           contactForm.reset()
         }
