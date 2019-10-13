@@ -1,11 +1,32 @@
 @import '~reset-css';
 
-@import 'core/variables';
-@import 'core/colours';
-@import 'core/fonts';
-@import 'core/grid';
-@import 'core/defaults';
-@import 'core/content';
+@import 'abstracts/fonts';
+@import 'abstracts/colours';
+@import 'abstracts/variables';
 
-@import 'modules/index';
-@import 'pages/index';
+@import 'base/defaults';
+@import 'base/content';
+
+@import 'layout/grid';
+@import 'layout/nav-menu';
+@import 'layout/site-header';
+@import 'layout/site-footer';
+
+@import 'components/loading-icon';
+@import 'components/alert-message';
+@import 'components/section';
+@import 'components/cta-button';
+@import 'components/form-field';
+@import 'components/hero-header';
+@import 'components/logo-block';
+@import 'components/scroll-hint';
+@import 'components/section-image';
+@import 'components/contact-form';
+@import 'components/footer-nav';
+@import 'components/social-icons';
+@import 'components/content-card';
+
+@import 'pages/home';
+@import 'pages/page';
+@import 'pages/blog';
+@import 'pages/about';
