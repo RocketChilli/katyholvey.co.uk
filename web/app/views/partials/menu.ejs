@@ -1,9 +1,20 @@
 <% const active = (name) => (type.split(' ').includes(name) ? '-active' : '') %>
+<% const link = (path) => type === 'homepage' ? path : path.replace(/^#/, '/#') %>
+
+<% const menus = {
+    about: { label: 'About', url: '#intro' },
+    services: { label: 'Services', url: '#services' },
+    blog: { label: 'Blog', url: '/blog' },
+    contact: { label: 'Contact', url: '#contact' },
+} %>
+
 <nav id="menu" class="nav-menu">
     <ul>
-        <li class="<%- active('about') %>"><a href="/#intro">About</a></li>
-        <li><a href="/#services">Services</a></li>
-        <li class="<%- active('blog') %>"><a href="/blog">Blog</a></li>
-        <li><a href="/#contact">Contact</a></li>
+        <% for (name of Object.keys(menus)) {
+            const menu = menus[name] %>
+            <li class="<%- active(name) %>">
+                <a href="<%- link(menu.url) %>"><%- menu.label %></a>
+            </li>
+        <% } %>
     </ul>
 </nav>
