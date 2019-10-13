@@ -71,6 +71,7 @@
       columns: 2;
 
       @media (max-width: $break-lg) {
+        margin-top: $grid-gutter * 2;
         columns: 1;
       }
     }
