@@ -1,0 +1,8 @@
+.page.about {
+  article img {
+    @media (min-width: $break-sm) {
+      float: left;
+      margin-right: $grid-gutter;
+    }
+  }
+}

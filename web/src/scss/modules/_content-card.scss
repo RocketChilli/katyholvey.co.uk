@@ -18,4 +18,20 @@
       margin: 0 (1.5 * $grid-gutter) 1rem;
     }
   }
+
+  img {
+    margin-left: auto;
+    margin-right: auto;
+
+    + * {
+      margin-top: 1.5 * $grid-gutter;
+    }
+  }
+
+  @media (max-width: $break-xs) {
+    .cta-button {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
 }

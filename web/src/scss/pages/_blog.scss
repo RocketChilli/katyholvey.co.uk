@@ -19,18 +19,15 @@
     @media (max-width: 620px) {
       margin-bottom: $grid-gutter;
     }
-  }
 
-  .cta-button {
-    margin-left: auto;
-  }
-
-  @media (max-width: $break-xs) {
-    .cta-button,
-    .symbols {
+    @media (max-width: $break-xs) {
       width: fit-content;
       margin-left: auto;
       margin-right: auto;
     }
+  }
+
+  .cta-button {
+    margin-left: auto;
   }
 }
