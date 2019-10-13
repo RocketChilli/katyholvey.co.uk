@@ -14,7 +14,7 @@
   }
 }
 
-.hero-header + .nav-menu {
+.hero-header + div > .nav-menu {
   background: $purple;
   
   & > ul {
