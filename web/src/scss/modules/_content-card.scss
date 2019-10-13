@@ -1,6 +1,21 @@
 .content-card {
-  background: $white;
-  border-radius: $box-radius;
-  padding: 2 * $grid-gutter;
-  box-shadow: 0 .07rem .5rem 0 $shadow-light;
+
+  > .body {
+    background: $white;
+    border-radius: $box-radius;
+    padding: 2 * $grid-gutter;
+    box-shadow: 0 .07rem .5rem 0 $shadow-light;
+
+    @media (max-width: $break-xs) {
+      padding: 1.5 * $grid-gutter;
+    }
+  }      
+
+  > .title {
+    margin: 0 (2 * $grid-gutter) 1rem;
+
+    @media (max-width: $break-xs) {
+      margin: 0 (1.5 * $grid-gutter) 1rem;
+    }
+  }
 }

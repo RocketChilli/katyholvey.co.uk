@@ -10,6 +10,7 @@
 
   .cta-button {
     width: 12em;
+    max-width: 100%;
   }
 
   .container {
@@ -18,10 +19,5 @@
 
   article {
     margin: 5rem auto;
-
-    .title {
-      margin-left: 3rem;
-      margin-bottom: 1rem;
-    }
   }
 }
