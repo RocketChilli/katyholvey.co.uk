@@ -1,8 +1,12 @@
 .page.about {
-  article img {
+  article .profile-image {
     @media (min-width: $break-sm) {
       float: left;
       margin-right: $grid-gutter;
     }
+  }
+
+  .sfep-badge {
+    max-width: 15rem;
   }
 }
