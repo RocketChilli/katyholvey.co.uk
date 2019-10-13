@@ -45,7 +45,7 @@ if (scrollHint && !window.scrollY) {
 // Show site header on home page after scroll
 const setHeader = () => {
   const header = document.querySelector('.site-header')
-  if (window.scrollY > window.innerHeight - 10) {
+  if (window.scrollY > window.innerHeight - 30) {
     header.classList.add('-active')
   } else {
     header.classList.remove('-active')
