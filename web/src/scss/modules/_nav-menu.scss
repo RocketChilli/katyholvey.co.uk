@@ -52,6 +52,10 @@
 
   li + li {
     margin-left: 1.5em;
+
+    @media (max-width: $break-sm) {
+      margin-left: .8em;
+    }
   }
 
   li.-active a {

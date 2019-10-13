@@ -8,6 +8,14 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+
+    @media (max-width: $break-xs) {
+      flex-direction: column;
+
+      .nav-menu {
+        margin-top: $grid-gutter;
+      }
+    }
   }
 
   .logo {
