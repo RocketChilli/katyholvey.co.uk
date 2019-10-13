@@ -4,17 +4,17 @@
 <div class="hero-header">
     <div class="background parallax" style="background-image: url('/img/trees.jpg')"></div>
     <div class="logo-block"><%- include('assets/logo.svg') %></div>
-    <a class="scroll-hint -hidden" href="#menu" data-no-url>Scroll down</a>
+    <a class="scroll-hint -hidden" href="#top" data-no-url>Scroll down</a>
 </div>
 
-<div id="menu"><%- include('partials/menu') %></div>
+<div id="top"><%- include('partials/menu') %></div>
 
 <main itemscope itemtype="https://schema.org/Organization">
     <meta itemprop="name" content="Katy Holvey Proofrerading">
     <meta itemprop="image" content="/img/logo.svg">
     <meta itemprop="mainEntityOfPage" content="https://katyholvey.co.uk">
 
-    <section id="intro" class="intro -medium">
+    <section class="intro -medium">
         <div class="container">
             <div>
                 <h1>Comprehensive<br>proofreading services</h1>
@@ -27,7 +27,8 @@
         </div>
     </section>
 
-    <section id="about" class="bio -medium">
+    <section class="bio -medium">
+        <div id="about" class="scroll-offset"></div> 
         <div class="container">
             <img src="/img/katy.jpg" alt="Photo of Katy">
             <div>
@@ -59,7 +60,8 @@
         </div>
     </section>
 
-    <section id="services" class="services -medium" itemprop="makesOffer" itemscope itemtype="https://schema.org/Offer">
+    <section class="services -medium" itemprop="makesOffer" itemscope itemtype="https://schema.org/Offer">
+        <div id="services" class="scroll-offset"></div>
         <div itemprop="itemOffered" itemscope itemtype="https://schema.org/Service">
             <div itemprop="serviceOutput" itemscope itemtype="https://schema.org/Thing">
                 <meta itemprop="name" content="Proofreading">
@@ -86,7 +88,8 @@
         </div>
     </section>
 
-    <section id="contact" class="contact -light">
+    <section class="contact -light">
+        <div id="contact" class="scroll-offset"></div>
         <div class="container">
             <div>
                 <h1>Get in touch or request a quote</h1>

@@ -26,6 +26,7 @@
     "sass-loader": "^7.2.0",
     "scroll-parallax": "https://github.com/JonathanHolvey/parallax/tarball/non-media",
     "scroll-to-element": "^2.0.3",
+    "throttle-debounce": "^2.1.0",
     "webpack": "^4.39.2",
     "webpack-cli": "^3.3.6",
     "webpack-livereload-plugin": "^2.2.0"
