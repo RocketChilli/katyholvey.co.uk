@@ -11,9 +11,26 @@
         fill: $light-grey;
       }
     }
+
+    @media (max-width: 760px) {
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 620px) {
+      margin-bottom: $grid-gutter;
+    }
   }
 
   .cta-button {
     margin-left: auto;
+  }
+
+  @media (max-width: $break-xs) {
+    .cta-button,
+    .symbols {
+      width: fit-content;
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 }
