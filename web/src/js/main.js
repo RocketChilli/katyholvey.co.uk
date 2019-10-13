@@ -16,7 +16,6 @@ const options = { intensity: 50 }
 new Parallax('.parallax', options).init()
 
 // Add scrolling effect to in-page links
-// FIXME: This doesn't work for links that include the page path
 const links = document.querySelectorAll('a[href^="#"]')
 links.forEach((link) => {
   link.addEventListener('click', (event) => {
@@ -42,6 +41,23 @@ if (scrollHint && !window.scrollY) {
     event.target.removeEventListener('scroll', callback)
   })
 }
+
+// Show site header on home page after scroll
+const setHeader = () => {
+  const header = document.querySelector('.site-header')
+  if (window.scrollY > window.innerHeight - 10) {
+    header.classList.add('-active')
+  } else {
+    header.classList.remove('-active')
+  }
+}
+
+if (document.querySelector('.homepage')) {
+  window.addEventListener('scroll', () => {
+    setHeader()
+  })
+}
+setHeader(false)
 
 // Handle contact form submission
 const contactForm = document.querySelector('.contact-form')

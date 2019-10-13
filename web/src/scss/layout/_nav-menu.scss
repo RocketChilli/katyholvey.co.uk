@@ -14,7 +14,7 @@
   }
 }
 
-.homepage .nav-menu {
+.hero-header + .nav-menu {
   background: $purple;
   
   & > ul {
@@ -45,7 +45,7 @@
   }
 }
 
-.page .nav-menu {
+.site-header .nav-menu {
   a {
     color: $purple;
   }

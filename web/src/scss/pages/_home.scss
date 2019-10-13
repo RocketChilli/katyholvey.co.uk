@@ -17,6 +17,18 @@
     }
   }
 
+  .site-header {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    top: -200px;
+    transition: top 800ms;
+
+    &.-active {
+      top: 0;
+    }
+  }
+
   .bio > .container {
     @extend %cols-3-9;
 
