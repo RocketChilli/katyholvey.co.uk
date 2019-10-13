@@ -1,5 +1,6 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const LiveReloadPlugin = require('webpack-livereload-plugin')
+const CopyPlugin = require('copy-webpack-plugin')
 const path = require('path')
 
 module.exports = (env, argv) => {
@@ -38,6 +39,7 @@ module.exports = (env, argv) => {
 
     plugins: [
       new MiniCssExtractPlugin({ filename: 'css/[name].css' }),
+      new CopyPlugin([{ from: './app/views/assets/logo.svg', to: 'img' }]),
       new LiveReloadPlugin(),
     ],
   }
