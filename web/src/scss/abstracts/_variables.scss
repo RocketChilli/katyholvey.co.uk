@@ -1,16 +1,8 @@
-$breakpoints: (
-  xs: 500px,
-  sm: 700px,
-  md: 800px,
-  lg: 900px,
-  xl: 1100px,
-);
-
-$break-xs: map-get($breakpoints, 'xs');
-$break-sm: map-get($breakpoints, 'sm');
-$break-md: map-get($breakpoints, 'md');
-$break-lg: map-get($breakpoints, 'lg');
-$break-xl: map-get($breakpoints, 'xl');
+$break-xs: 500px;
+$break-sm: 700px;
+$break-md: 800px;
+$break-lg: 900px;
+$break-xl: 1100px;
 
 $grid-gutter: 1.5rem;
 
