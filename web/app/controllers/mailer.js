@@ -1,21 +1,20 @@
-const sendgrid = require('@sendgrid/mail')
+const sendmail = require('sendmail')()
 
 const controller = (req, res) => {
-  sendgrid.setApiKey(process.env.SENDGRID_API_KEY)
   const message = {
     to: process.env.CONTACT_EMAIL,
     from: `${req.body.name} <${req.body.email}>`,
-    subject: 'Message from Proofreading',
+    subject: 'Proofreading enquiry',
     text: `${req.body.message}\n\nName: ${req.body.name}\nEmail: ${req.body.email}\nPhone: ${req.body.phone}`,
   }
 
-  sendgrid.send(message)
-    .then(() => {
+  sendmail(message, (error) => {
+    if (error) {
+      res.sendStatus(400)
+    } else {
       res.sendStatus(200)
-    })
-    .catch((error) => {
-      res.sendStatus(error.code)
-    })
+    }
+  })
 }
 
 module.exports = controller
