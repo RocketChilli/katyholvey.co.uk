@@ -13,3 +13,4 @@ services:
     env_file: .env
     environment:
       VIRTUAL_HOST: local.katyholvey.co.uk
+      NODE_ENV: development
