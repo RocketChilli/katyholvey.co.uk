@@ -1,11 +1,17 @@
 version: '3.6'
 
+networks:
+  front:
+    external: true
+    name: proxy
+
 services:
   web:
     build:
       context: ./web
     container_name: katyholvey-web
-    network_mode: bridge
+    networks:
+      - front
     volumes:
       - ./web:/home/node
     ports:
