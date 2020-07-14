@@ -3,7 +3,11 @@
     @media (min-width: $break-sm) {
       float: left;
       margin-right: $grid-gutter;
+      max-width: 20em;
     }
+
+    width: 30em;
+    max-width: 80%;
   }
 
   .sfep-badge {
