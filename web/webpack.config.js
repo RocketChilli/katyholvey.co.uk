@@ -39,7 +39,7 @@ module.exports = (env, argv) => {
 
     plugins: [
       new MiniCssExtractPlugin({ filename: 'css/[name].css' }),
-      new CopyPlugin([{ from: './app/views/assets/logo.svg', to: 'img' }]),
+      new CopyPlugin({ patterns: [{ from: './app/views/assets/logo.svg', to: 'img' }] }),
       new LiveReloadPlugin(),
     ],
   }
