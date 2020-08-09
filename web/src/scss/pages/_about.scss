@@ -3,7 +3,12 @@
     @media (min-width: $break-sm) {
       float: left;
       margin-right: $grid-gutter;
+      margin-bottom: $grid-gutter * 1.5;
       max-width: 20em;
+
+      & + p + p {
+        clear: left;
+      }
     }
 
     width: 30em;
@@ -12,5 +17,10 @@
 
   .ciep-badge {
     max-width: 15rem;
+  }
+
+  .cta-button {
+    margin-left: auto;
+    margin-right: auto;
   }
 }
