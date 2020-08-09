@@ -70,12 +70,17 @@
 
     ul {
       margin-top: $grid-gutter * 3;
-      columns: 2;
+      // TODO: Uncomment or remove this after feedback from Katy
+      // columns: 2;
 
       @media (max-width: $break-lg) {
         margin-top: $grid-gutter * 2;
         columns: 1;
       }
+    }
+
+    p + ul {
+      margin-top: $grid-gutter;
     }
   }
 
