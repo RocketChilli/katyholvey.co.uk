@@ -2,11 +2,12 @@ const express = require('express')
 const path = require('path')
 const router = require('./router')
 const logger = require('./middleware/logger')
+const compression = require('./middleware/compression')
 
 const app = express()
 const port = 80
 
-app.use(logger)
+app.use([logger, compression])
 app.use(express.json())
 app.use(express.static(path.join(__dirname, 'public')))
 app.use('/', router)
