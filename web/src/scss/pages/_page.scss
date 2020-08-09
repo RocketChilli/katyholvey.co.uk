@@ -1,0 +1,23 @@
+.page {
+  background: $light-grey;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+
+  .site-footer {
+    margin-top: auto;
+  }
+
+  .cta-button {
+    width: 12em;
+    max-width: 100%;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  article {
+    margin: 5rem auto;
+  }
+}

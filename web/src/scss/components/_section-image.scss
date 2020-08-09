@@ -1,0 +1,45 @@
+.section-image {
+  position: absolute;
+  width: calc(50% - #{$grid-gutter});
+  height: 100%;
+  overflow: hidden;
+  top: 0;
+  box-sizing: content-box;
+
+  &.-right {
+    right: 0;
+  }
+
+  &.-left {
+    left: 0;
+  }
+
+  > img {
+    border-radius: 0;
+    object-fit: cover;
+    min-width: 100%;
+    min-height: 100%;
+  }
+
+  @media (max-width: $break-lg) {
+    position: static;
+    width: auto;
+    margin: $grid-gutter * -5;
+    margin-top: $grid-gutter * 5;
+    height: 0;
+    padding-bottom: 70%;
+  }
+
+  // These margins must match that of the section
+  @media (max-width: $break-md) {
+    margin-left: $grid-gutter * -3.5;
+    margin-right: $grid-gutter * -3.5;
+    padding-bottom: 90%;
+  }
+
+  @media (max-width: $break-sm) {
+    margin-left: $grid-gutter * -2;
+    margin-right: $grid-gutter * -2;
+    margin-top: $grid-gutter * 3;
+  }
+}

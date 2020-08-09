@@ -1,19 +1,49 @@
 .homepage {
   .hero-header {
     width: 100%;
-    height: 90vh;
+    height: calc(100vh - 3.6rem);
+    height: calc(var(--vh, 1vh) * 100 - 3.6rem);
   } 
 
   .intro > .container {
     @extend %cols-8-4;
 
-    > .cta-button {
+    .cta-button {
       justify-self: end;
+
+      @media (max-width: $break-lg) {
+        justify-self: center;
+      }
+    }
+  }
+
+  .site-header {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    top: -200px;
+    transition: top 800ms;
+
+    &.-active {
+      top: 0;
     }
   }
 
   .bio > .container {
     @extend %cols-3-9;
+
+    .cta-button {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    img {
+      @media (max-width: $break-md) {
+        justify-self: center;
+      }
+
+      max-width: 256px;
+    }
   }
 
   .about > .container {
@@ -28,12 +58,8 @@
     @extend %cols-1-11;
 
     .symbol-group {
-      font-size: $text-xxxl;
-      color: $light-grey;
-    }
-
-    p {
-      font-size: $text-sm;
+      width: 100%;
+      fill: $light-grey;
     }
   }
 
@@ -44,7 +70,22 @@
 
     ul {
       margin-top: $grid-gutter * 3;
-      columns: 2;
+      // TODO: Uncomment or remove this after feedback from Katy
+      // columns: 2;
+
+      @media (max-width: $break-lg) {
+        margin-top: $grid-gutter * 2;
+        columns: 1;
+      }
     }
+
+    p + ul {
+      margin-top: $grid-gutter;
+    }
+  }
+
+  .contact > .container {
+    justify-content: stretch;
+    width: 100%;
   }
 }

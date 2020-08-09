@@ -2,10 +2,10 @@ FROM node:alpine
 
 WORKDIR /home/node
 COPY package*.json ./
-RUN npm install
+RUN npm install --prod
 
-COPY src ./src/
-RUN npm run dev
+COPY ./ ./
+RUN npm run build
 
-COPY app ./app/
+EXPOSE 80
 CMD npm start

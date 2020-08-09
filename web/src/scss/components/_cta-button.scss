@@ -1,0 +1,51 @@
+.cta-button {
+  display: block;
+  background: $purple;
+  color: $white; 
+  font-size: $text-lg;
+  text-align: center;
+  text-decoration: none;
+  line-height: 1.2em;
+  border: 0;
+  border-radius: $box-radius;
+  min-width: 8em;
+  padding: .6em 1em;
+  box-shadow: 0 .07rem .5rem 0 $shadow-dark;
+
+  &.-light {
+    background: $white;
+    color: $purple;
+    border: 2px solid $purple;
+    box-shadow: none;
+    padding: .5em 1em;
+  }
+
+  .busy {
+    display: none;
+  }
+}
+
+form.-sending .cta-button {
+  position: relative;
+  display: flex;
+
+  .label {
+    opacity: 0;
+  }
+
+  .busy {
+    position: absolute;
+    display: inline-block;
+    padding-left: 2em;
+
+    &::before {
+      @extend %loading-icon;
+      border-top-color: $white;
+      border-bottom-color: $white;
+      content: '';
+      display: inline-block;
+      width: 1em;
+      height: 1em;
+    }
+  }
+}

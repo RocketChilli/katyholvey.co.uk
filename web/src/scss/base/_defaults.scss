@@ -1,11 +1,17 @@
+html,
 body {
   font-family: Merriweather;
   font-weight: 300;
   font-size: $text-default;
+  min-width: 350px;
+
+  @media (max-width: $break-sm) {
+    font-size: $text-mobile;
+  }
 }
 
-main {
-  background: $white;
+html {
+  height: 100%;
 }
 
 * {
@@ -19,4 +25,8 @@ button {
 
 button {
   font-family: inherit;
+}
+
+em {
+  font-style: italic;
 }

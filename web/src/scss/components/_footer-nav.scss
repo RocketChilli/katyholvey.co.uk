@@ -1,0 +1,14 @@
+.footer-nav {
+  ul {
+    display: flex;
+
+    li + li {
+      margin-left: $grid-gutter;
+    }
+  }
+
+  a {
+    color: $white;
+    text-decoration: none;
+  }
+}

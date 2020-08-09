@@ -1,17 +1,22 @@
 version: '3.6'
 
+networks:
+  front:
+    external: true
+    name: proxy
+
 services:
   web:
     build:
       context: ./web
     container_name: katyholvey-web
-    network_mode: bridge
+    networks:
+      - front
     volumes:
       - ./web:/home/node
-      - /home/node/node_modules
     ports:
-      - 3000
       - 35729:35729
+    env_file: .env
     environment:
       VIRTUAL_HOST: local.katyholvey.co.uk
-      VIRTUAL_PORT: 3000
+      NODE_ENV: development

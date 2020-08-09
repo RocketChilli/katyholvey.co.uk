@@ -1,95 +1,129 @@
 <%- include('partials/head') %>
+<%- include('partials/header') %>
 
-<header class="hero-header">
-    <img class="background" src="/img/trees.jpg" alt>
+<div class="hero-header">
+    <div class="background parallax" style="background-image: url('/img/trees.jpg')"></div>
     <div class="logo-block"><%- include('assets/logo.svg') %></div>
-</header>
+    <a class="scroll-hint -hidden" href="#top" data-no-url>Scroll down</a>
+</div>
 
-<nav class="nav-menu">
-    <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="/blog">Blog</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-</nav>
+<div id="top"><%- include('partials/menu') %></div>
 
-<main>
+<main itemscope itemtype="https://schema.org/Organization">
+    <meta itemprop="name" content="Katy Holvey Proofrerading">
+    <meta itemprop="image" content="/img/logo.svg">
+    <meta itemprop="mainEntityOfPage" content="https://katyholvey.co.uk">
+
     <section class="intro -medium">
         <div class="container">
             <div>
-                <h1>Execepteur sint occaecat</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+                <h1>Comprehensive<br>proofreading services</h1>
+                <div itemprop="description">
+                    <p>I am a freelance proofreader with a background in natural history and wildlife conservation.</p>
+                    <p>Whether you are a publisher, self-publisher, business, charity, blog writer, or student, I provide a meticulous, high quality service. By detecting and correcting errors in your writing and layout I can give your work a professional and polished look so that your readers can really focus on the content of your text.</p>
+                </div>
             </div>
-            <a class="cta-button" href="#contact">Ask an expert</a>
+            <a class="cta-button" href="#contact">Get a quote now</a>
         </div>
     </section>
 
     <section class="bio -medium">
+        <div id="about" class="scroll-offset"></div> 
         <div class="container">
             <img src="/img/katy.jpg" alt="Photo of Katy">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris, labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+            <div>
+                <p>I am passionate about words and the English language and I always have my nose in a book. After originally graduating with a degree in Zoology, my main focus is now on language and how it works. Grammar, spelling, and punctuation are my watchwords!</p>
+                <a class="cta-button -light" href="about">Read more</a>
+            </div>
         </div>
     </section>
 
     <section class="about -light">
         <div class="container">
             <div>
-                <h1>Execepteur sint occaecat</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris, labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
-                <a class="cta-button" href="#contact">Ask an expert</a>
+                <h1>What is proofreading?</h1>
+                <p>Proofreading is the art of reading a document or publication to detect and correct errors in the text. These errors may be simple typos, grammatical mistakes, or problems with the way text is laid out on a page.</p>
+                <p>I provide a range of proofreading services, from a basic check to a comprehensive proofread.</p>
+                <a class="cta-button" href="#services">See all services</a>
             </div>
         </div>
         <div class="section-image -right"><img src="/img/type.jpg" alt></div>
     </section>
 
-    <section class="quote -dark -slim">
+    <section class="quote -dark -slim -small">
         <div class="container">
-            <div class="symbol-group">[#&para;</div>
+            <div class="symbol-group"><%- include('assets/symbols.svg') %></div>
             <div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                <h1>What are those marks?</h1>
+                <p>The British Standards Institution (BSI) proof-correction symbols are used both in Britain and internationally. These BSI symbols are added to an electronic or paper document by a proofreader or editor to indicate and correct problems in a text.</p>
             </div>
         </div>
     </section>
 
-    <section class="services -medium">
-        <div class="container">
-            <div>
-                <h1>Excepteur sint occaecat sed do eiusmod</h1>
-                <ul>
-                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</li>
-                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</li>
-                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</li>
-                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</li>
-                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</li>
-                    <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</li>
-                </ul>
+    <section class="services -medium" itemprop="makesOffer" itemscope itemtype="https://schema.org/Offer">
+        <div id="services" class="scroll-offset"></div>
+        <div itemprop="itemOffered" itemscope itemtype="https://schema.org/Service">
+            <div itemprop="serviceOutput" itemscope itemtype="https://schema.org/Thing">
+                <meta itemprop="name" content="Proofreading">
+                <meta itemprop="identifier" content="https://en.wikipedia.org/wiki/Proofreading">
+            </div>
+            <div itemprop="areaServed" itemscope itemtype="https://schema.org/Country">
+                <meta itemprop="identifier" content="United Kingdom">
+            </div>
+
+            <div class="container">
+                <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                    <h1 itemprop="name">Proofreading for any budget</h1>
+                    <p><span itemprop="description">I provide a versatile proofreading service, starting from a basic check of your text for grammar, spelling, and punctuation errors to a full proofread of your document, and anything in between.</span> This can include:</p>
+                    <ul>
+                        <li>checking your text for grammar, spelling, and punctuation errors;</li>
+                        <li>checking your text for consistency in spacing, layout, and alignment (for example, checking spacing before and after paragraphs and headings);</li>
+                        <li>checking your text for consistency of heading styles, paragraph styles, list styles, and fonts;</li>
+                        <li>checking displayed materials (such as illustrations, graphs, and tables) for grammar, spelling, and punctuation errors;</li>
+                        <li>checking displayed materials for consistency in spacing, layout, alignment and positioning;</li>
+                        <li>checking displayed materials for consistency within and between them (for example, checking that captions are consistent in style and layout and match the material they are attached to);</li>
+                        <li>checking notes, references, and bibliographies for grammar, spelling, and punctuation errors;</li>
+                        <li>checking notes, references, and bibliographies for consistency in style, spacing and layout.</li>
+                    </ul>
+                    <p>I make corrections where things are wrong but I won't make changes if they’re not needed. I will note queries for anything in your document that needs clarification.</p>
+                    <p>I can mark up your work onscreen in Adobe Reader using either BSI symbols or Comment tools, or in Microsoft Word using Track Changes. If you prefer dealing with hard copies I can mark up on paper using BSI symbols.</p>
+                    <p>Note for students: Although most universities allow a professional proofreader to check your work, you should consult your university's guidelines on proofreading before contacting me.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="-light">
+    <section class="contact -light">
+        <div id="contact" class="scroll-offset"></div>
         <div class="container">
             <div>
-                <h1>Get in touch, request a quote</h1>
+                <h1>Get in touch or request a quote</h1>
+                <p>Have questions or want to find out what I can do for your project? Just send me a message and I'll be in touch.</p>
                 <form class="contact-form">
                     <div class="form-field">
                         <label for="name">Name</label>
-                        <input type="text" name="name" placeholder="your name">
+                        <input type="text" required name="name" placeholder="your name">
                     </div>
                     <div class="form-field">
                         <label for="phone">Phone</label>
-                        <input type="text" name="phone" placeholder="your phone number">
+                        <input type="phone" name="phone" placeholder="your phone number">
                     </div>
                     <div class="form-field">
                         <label for="email">Email</label>
-                        <input type="text" name="email" placeholder="your email address">
+                        <input type="email" required name="email" placeholder="your email address">
                     </div>
                     <div class="form-field">
                         <label for="message">How can I help?</label>
-                        <textarea name="message"></textarea>
+                        <textarea required name="message"></textarea>
                     </div>
-                    <button type="submit" class="cta-button">Let's chat</button>
+                    <div class="message">
+                        <p class="success">Your message has been sent</p>
+                        <p class="error">Something went wrong. Please try again</p>
+                    </div>
+                    <button type="submit" class="cta-button">
+                        <span class="label">Send message</span>
+                        <span class="busy">Sending</span>
+                    </button>
                 </form>
             </div>
         </div>

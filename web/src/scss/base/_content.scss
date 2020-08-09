@@ -2,6 +2,15 @@ main {
   h1 {
     font-size: $text-xxl;
     line-height: 1.2;
+  }
+
+  h2 {
+    font-size: $text-xl;
+  }
+
+  h1,
+  h2,
+  h3 {
     color: $purple;
   }
 
@@ -9,8 +18,7 @@ main {
   ol,
   ul {
     font-size: $text-md;
-    line-height: 1.5;
-    letter-spacing: .05em;
+    line-height: 1.35;
     color: $dark-grey;
   }
 
@@ -29,7 +37,6 @@ main {
         left: -.5em;
       }
     }
-
   }
 
   h1,
@@ -48,6 +55,34 @@ main {
   }
 
   img {
+    display: block;
     border-radius: $box-radius;
+  }
+
+  .-small {
+    p,
+    ol,
+    ul {
+      font-size: $text-sm;
+    }
+
+    h1 {
+      font-size: $text-lg;
+    }
+
+    h1,
+    h2,
+    h3,
+    p,
+    ol,
+    ul {
+      + * {
+        margin-top: $grid-gutter * .4;
+      }
+    }
+
+    li + li {
+      margin-top: $grid-gutter * .8;
+    }
   }
 }

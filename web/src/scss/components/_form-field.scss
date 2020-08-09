@@ -1,14 +1,28 @@
 .form-field {
   position: relative;
   padding-top: 1.5em;
+  overflow: show;
 
   > input[type='text'],
+  > input[type='email'],
+  > input[type='phone'],
   > textarea {
     background: $white;
     border: 1px solid $dark-grey;
     border-radius: $box-radius;
     padding: .8em;
     font-size: $text-sm;
+    width: 100%;
+
+    &:focus {
+      outline: 0;
+      box-shadow: 0 0 3px 3px $light-purple;
+    }
+  }
+
+  > textarea {
+    resize: vertical;
+    font-family: sans-serif;
   }
 
   > label {
