@@ -1,4 +1,5 @@
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const LiveReloadPlugin = require('webpack-livereload-plugin')
 const CopyPlugin = require('copy-webpack-plugin')
 const path = require('path')
@@ -39,6 +40,7 @@ module.exports = (env, argv) => {
 
     plugins: [
       new MiniCssExtractPlugin({ filename: 'css/[name].css' }),
+      new OptimizeCSSAssetsPlugin(),
       new CopyPlugin({ patterns: [{ from: './app/views/assets/logo.svg', to: 'img' }] }),
       new LiveReloadPlugin(),
     ],
