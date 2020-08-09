@@ -21,7 +21,8 @@
 
   .text p {
     margin-top: $grid-gutter / 2;
-    color: $overlay-light;
+    color: rgba($white, .8);
+    font-size: 90%;
   }
 
   .social-icons {
