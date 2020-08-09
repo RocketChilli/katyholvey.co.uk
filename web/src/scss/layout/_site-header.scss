@@ -11,7 +11,13 @@
     justify-content: space-between;
 
     @media (max-width: $break-xs) {
-      flex-direction: column;
+      display: block;
+
+      & > * {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
 
       .nav-menu {
         margin-top: $grid-gutter;
@@ -19,11 +25,7 @@
     }
   }
 
-  .logo {
-    display: block;
-
-    svg path {
-      fill: $purple;
-    }
+  .logo svg path {
+    fill: $purple;
   }
 }
