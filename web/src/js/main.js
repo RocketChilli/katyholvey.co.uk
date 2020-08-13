@@ -1,6 +1,6 @@
 import Parallax from 'scroll-parallax'
 import scrollToElement from 'scroll-to-element'
-import axios from 'axios'
+import formHandler from './form'
 
 // Use initial viewport height for mobile browsers
 const vh = window.innerHeight / 100
@@ -62,38 +62,5 @@ setHeader(false)
 // Handle contact form submission
 const contactForm = document.querySelector('.contact-form')
 if (contactForm) {
-  contactForm.addEventListener('submit', (event) => {
-    event.preventDefault()
-    event.target.classList.add('-sending')
-
-    const data = {
-      name: contactForm.querySelector('[name="name"]').value,
-      phone: contactForm.querySelector('[name="phone"]').value,
-      email: contactForm.querySelector('[name="email"]').value,
-      message: contactForm.querySelector('[name="message"]').value,
-    }
-    axios({
-      url: '/mailer',
-      method: 'post',
-      data,
-      headers: { 'Content-type': 'application/json' },
-    })
-      .catch(error => error)
-      .then((result) => {
-        // Get status and reset form
-        contactForm.classList.remove('-sending')
-        let status = 'error'
-        if (result.status === 200) {
-          status = 'success'
-          contactForm.reset()
-        }
-
-        // Provide feedback after sending message
-        const message = contactForm.querySelector(`.message .${status}`)
-        message.classList.add('-visible')
-        setTimeout(() => {
-          message.classList.remove('-visible')
-        }, 3000)
-      })
-  })
+  contactForm.addEventListener('submit', formHandler)
 }
