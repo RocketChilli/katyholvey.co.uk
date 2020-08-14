@@ -1,4 +1,5 @@
 import axios from 'axios'
+import * as dragDrop from './drag-drop'
 
 /**
  * Handle contact form submission
@@ -40,67 +41,13 @@ const submitHandler = async (event) => {
 }
 
 /**
- * Check if drag events should allow drops
- * @param {Event} - The drag or drop event
- */
-const dragValidator = (event) => {
-  const { types } = event.dataTransfer
-  if (types.length === 1 && types[0] === 'Files') {
-    event.preventDefault()
-    return true
-  }
-
-  return false
-}
-
-/**
- * Display feedback when dragging valid files
- * @param {Event} - The dragover or dragenter event
- */
-const dragHandler = (event) => {
-  if (dragValidator(event)) {
-    event.target.classList.add('-dragover')
-  }
-}
-
-/**
- * Handle dropped files
- * @param {Event} - The drop event
- */
-const dropHandler = (event) => {
-  if (dragValidator(event)) {
-    event.target.classList.remove('-dragover')
-    const { files } = event.dataTransfer
-    console.log(files)
-  }
-}
-
-/**
- * Set up drag and drop for the file uploader
- * @param {Element} The file uploader element
- */
-const initDragDrop = (target) => {
-  // Display feedback when dragging in
-  target.addEventListener('dragover', dragHandler)
-  target.addEventListener('dragenter', dragHandler)
-
-  // Display feedback when dragging out
-  target.addEventListener('dragleave', () => {
-    target.classList.remove('-dragover')
-  })
-
-  // Handle dropped files
-  target.addEventListener('drop', dropHandler)
-}
-
-/**
  * Add event listeners to contact form
  * @param {Element} - The form to initialise
  */
 const initForm = (form) => {
-  form.addEventListener('submit', submitHandler)
   const fileUpload = form.querySelector('.file-upload')
-  initDragDrop(fileUpload)
+  dragDrop.setup(fileUpload)
+  form.addEventListener('submit', submitHandler)
 }
 
 export default initForm
