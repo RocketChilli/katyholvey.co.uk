@@ -1,0 +1,56 @@
+.file-upload {
+  background: $white;
+  border: 2px dashed lighten($dark-grey, 20);
+  border-radius: $box-radius;
+  padding: 2rem 1rem;
+  text-align: center;
+  color: $dark-grey;
+  display: flex;
+  justify-content: center;
+  transition: box-shadow .3s;
+
+  .info {
+    font-size: $text-md;
+    margin-bottom: .3rem;
+  }
+
+  .info.-count,
+  input {
+    display: none;
+  }
+
+  label {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  svg {
+    margin-left: -1rem;
+    margin-right: 1rem;
+    position: relative;
+    top: .1rem;
+    fill: none;
+    stroke: $brown;
+
+    .plus,
+    .text {
+      transition: opacity .3s;
+    }
+
+    .plus {
+      opacity: 0;
+    }
+  }
+
+  &.-dragover {
+    box-shadow: 0 0 .1rem .5rem rgba($purple, .4);
+
+    svg .plus {
+      opacity: 1;
+    }
+
+    svg .text {
+      opacity: 0;
+    }
+  }
+}

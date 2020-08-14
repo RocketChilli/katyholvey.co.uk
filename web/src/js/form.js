@@ -20,7 +20,7 @@ const formHandler = async (event) => {
     method: 'post',
     data,
     headers: { 'Content-type': 'application/json' },
-  })
+  }).catch(error => error)
 
   // Get status and reset form
   contactForm.classList.remove('-sending')
@@ -31,7 +31,7 @@ const formHandler = async (event) => {
   }
 
   // Provide feedback after sending message
-  const message = contactForm.querySelector(`.message .${status}`)
+  const message = contactForm.querySelector(`.status .${status}`)
   message.classList.add('-visible')
   setTimeout(() => {
     message.classList.remove('-visible')
