@@ -45,6 +45,10 @@
   &.-dragover {
     box-shadow: 0 0 .1rem .5rem rgba($purple, .4);
 
+    & > * {
+      pointer-events: none;
+    }
+
     svg .plus {
       opacity: 1;
     }

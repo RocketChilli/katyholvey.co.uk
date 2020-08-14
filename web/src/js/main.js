@@ -1,6 +1,6 @@
 import Parallax from 'scroll-parallax'
 import scrollToElement from 'scroll-to-element'
-import formHandler from './form'
+import initForm from './form'
 
 // Use initial viewport height for mobile browsers
 const vh = window.innerHeight / 100
@@ -62,5 +62,5 @@ setHeader(false)
 // Handle contact form submission
 const contactForm = document.querySelector('.contact-form')
 if (contactForm) {
-  contactForm.addEventListener('submit', formHandler)
+  initForm(contactForm)
 }
