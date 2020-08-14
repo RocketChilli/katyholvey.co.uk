@@ -1,6 +1,6 @@
 const nodemailer = require('nodemailer')
 
-const controller = (req, res) => {
+const controller = async (req, res) => {
   const message = {
     to: process.env.CONTACT_EMAIL,
     from: `${req.body.name} <${req.body.email}>`,
@@ -17,14 +17,13 @@ const controller = (req, res) => {
     },
   })
 
-  transport.sendMail(message)
-    .then(() => {
-      res.sendStatus(200)
-    })
-    .catch((error) => {
-      console.error(error)
-      res.sendStatus(400)
-    })
+  try {
+    await transport.sendMail(message)
+    res.sendStatus(200)
+  } catch (error) {
+    console.error(error)
+    res.sendStatus(400)
+  }
 }
 
 module.exports = controller
