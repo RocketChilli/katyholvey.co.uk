@@ -62,6 +62,11 @@ const dropHandler = (event) => {
     resetHandler(event)
     files.push(...event.dataTransfer.files)
     console.log(files)
+
+    if (files.length > 1) {
+      event.target.classList.add('-filled')
+      event.target.querySelector('[data-count]').setAttribute('data-count', files.length)
+    }
   }
 }
 

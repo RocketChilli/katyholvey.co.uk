@@ -14,6 +14,10 @@
     margin-bottom: .3rem;
   }
 
+  [data-count]::before {
+    content: attr(data-count);
+  }
+
   .info.-count,
   input {
     display: none;
@@ -55,6 +59,16 @@
 
     svg .text {
       opacity: 0;
+    }
+  }
+
+  &.-filled {
+    .info.-count {
+      display: block;
+    }
+
+    .info.-default {
+      display: none;
     }
   }
 }
