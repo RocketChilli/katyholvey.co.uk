@@ -11,17 +11,30 @@
   min-width: 8em;
   padding: .6em 1em;
   box-shadow: 0 .07rem .5rem 0 $shadow-dark;
+  transition: box-shadow .3s, background .3s;
 
   &.-light {
     background: $white;
     color: $purple;
     border: 2px solid $purple;
-    box-shadow: none;
     padding: .5em 1em;
   }
 
   .busy {
     display: none;
+  }
+
+  &:hover {
+    box-shadow: 0 .07rem .5rem 0 $purple;
+  }
+
+  &:focus {
+    outline: 0;
+    background: darken($purple, 10);
+
+    &.-light {
+      background: lighten($purple, 50);
+    }
   }
 }
 
