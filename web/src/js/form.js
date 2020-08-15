@@ -1,11 +1,12 @@
 import axios from 'axios'
-import * as dragDrop from './drag-drop'
+import DragDrop from './drag-drop'
 
 /**
  * Handle contact form submission
  * @param {Event} - The form submit event
+ * @param {DragDrop} - The drag and drop manager for the file upload field
  */
-const submitHandler = async (event) => {
+const submitHandler = async (event, dragDrop) => {
   event.preventDefault()
   const form = event.target
   form.classList.add('-sending')
@@ -27,6 +28,7 @@ const submitHandler = async (event) => {
   if (result.status === 200) {
     status = 'success'
     form.reset()
+    dragDrop.reset()
   }
 
   // Provide feedback after sending message
@@ -43,8 +45,8 @@ const submitHandler = async (event) => {
  */
 const initForm = (form) => {
   const fileUpload = form.querySelector('.file-upload')
-  dragDrop.setup(fileUpload)
-  form.addEventListener('submit', submitHandler)
+  const dragDrop = new DragDrop(fileUpload)
+  form.addEventListener('submit', event => submitHandler(event, dragDrop))
 }
 
 export default initForm
