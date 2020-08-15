@@ -2,6 +2,7 @@ class DragDrop {
   constructor(target) {
     this.target = target
     this.counter = target.querySelector('[data-count]')
+    this.picker = target.querySelector('input[type="file"]')
     this.files = []
     this.setup()
   }
@@ -19,6 +20,9 @@ class DragDrop {
 
     // Handle dropped files
     this.target.addEventListener('drop', this.drop.bind(this))
+
+    // Listen for changes to picked files
+    this.picker.addEventListener('change', this.update.bind(this))
   }
 
   /**
@@ -70,8 +74,10 @@ class DragDrop {
    * Show and update the file count message
    */
   update() {
-    this.counter.setAttribute('data-count', this.files.length)
-    if (this.files.length > 0) {
+    console.log(this.picker.files.length)
+    const count = this.picker.files.length + this.files.length
+    this.counter.setAttribute('data-count', count)
+    if (count > 0) {
       this.target.classList.add('-filled')
     } else {
       this.target.classList.remove('-filled')
