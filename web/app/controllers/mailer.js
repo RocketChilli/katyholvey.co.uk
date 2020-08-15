@@ -8,6 +8,14 @@ const controller = async (req, res) => {
     text: `${req.body.message}\n\nName: ${req.body.name}\nEmail: ${req.body.email}\nPhone: ${req.body.phone}`,
   }
 
+  // Add any files as attachments
+  if (req.files.files.length > 0) {
+    message.attachments = req.files.files.map(({ path, originalFilename }) => ({
+      path: Array.isArray(path) ? path[1] : path,
+      filename: Array.isArray(originalFilename) ? originalFilename[1] : originalFilename,
+    }))
+  }
+
   const transport = nodemailer.createTransport({
     host: process.env.SMTP_HOST,
     port: process.env.SMTP_PORT,

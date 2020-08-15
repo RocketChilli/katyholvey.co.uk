@@ -10,12 +10,10 @@ const submitHandler = async (event) => {
   const form = event.target
   form.classList.add('-sending')
 
-  const data = {
-    name: form.querySelector('[name="name"]').value,
-    phone: form.querySelector('[name="phone"]').value,
-    email: form.querySelector('[name="email"]').value,
-    message: form.querySelector('[name="message"]').value,
-  }
+  const data = new FormData(form)
+  dragDrop.files.forEach((file) => {
+    data.append('files', file)
+  })
 
   const result = await axios({
     url: '/mailer',
