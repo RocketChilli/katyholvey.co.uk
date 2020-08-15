@@ -100,30 +100,43 @@
                 <h1>Get in touch or request a quote</h1>
                 <p>Have questions or want to find out what I can do for your project? Just send me a message and I'll be in touch.</p>
                 <form class="contact-form">
-                    <div class="form-field">
-                        <label for="contact-form-name">Name</label>
-                        <input type="text" required name="name" id="contact-form-name" placeholder="your name">
-                    </div>
-                    <div class="form-field">
-                        <label for="contact-form-phone">Phone</label>
-                        <input type="phone" name="phone" id="contact-form-phone" placeholder="your phone number">
-                    </div>
-                    <div class="form-field">
-                        <label for="contact-form-email">Email</label>
-                        <input type="email" required name="email" id="contact-form-email" placeholder="your email address">
-                    </div>
-                    <div class="form-field">
-                        <label for="contact-form-message">How can I help?</label>
-                        <textarea required name="message" id="contact-form-message"></textarea>
-                    </div>
-                    <div class="message">
-                        <p class="success">Your message has been sent</p>
-                        <p class="error">Something went wrong. Please try again</p>
-                    </div>
-                    <button type="submit" class="cta-button">
-                        <span class="label">Send message</span>
-                        <span class="busy">Sending</span>
-                    </button>
+                    <main>
+                        <div class="form-field">
+                            <label for="contact-form-name">Name</label>
+                            <input type="text" required name="name" id="contact-form-name" placeholder="your name">
+                        </div>
+                        <div class="form-field">
+                            <label for="contact-form-phone">Phone</label>
+                            <input type="phone" name="phone" id="contact-form-phone" placeholder="your phone number">
+                        </div>
+                        <div class="form-field">
+                            <label for="contact-form-email">Email</label>
+                            <input type="email" required name="email" id="contact-form-email" placeholder="your email address">
+                        </div>
+                        <div class="form-field">
+                            <label for="contact-form-message">How can I help?</label>
+                            <textarea required name="message" id="contact-form-message"></textarea>
+                        </div>
+                    </main>
+                    <footer>
+                        <div class="file-upload">
+                            <%- include('./assets/icon-document.svg') %>
+                            <div>
+                                <div class="info -default">Document to upload?</div>
+                                <div class="info -count" data-count="0"> file<span class="plural">s</span> added</div>
+                                <label for="contact-form-files" tabindex="0">Choose a file</label> or drag it here
+                            </div>
+                            <input type="file" name="files[]" id="contact-form-files" multiple>
+                        </div>
+                        <button type="submit" class="cta-button">
+                            <span class="label">Send message</span>
+                            <span class="busy">Sending</span>
+                        </button>
+                        <div class="status">
+                            <p class="success">Your message has been sent</p>
+                            <p class="error">Something went wrong. Please try again</p>
+                        </div>
+                    </footer>
                 </form>
             </div>
         </div>
