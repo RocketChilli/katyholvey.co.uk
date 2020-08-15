@@ -18,6 +18,10 @@
     content: attr(data-count);
   }
 
+  [data-count="1"] .plural {
+    display: none;
+  }
+
   .info.-count,
   input {
     display: none;
