@@ -1,15 +1,12 @@
 const os = require('os')
 const express = require('express')
-const formData = require('express-form-data')
+const multer = require('multer')
 const home = require('./controllers/home')
 const blog = require('./controllers/blog')
 const mailer = require('./controllers/mailer')
 const page = require('./controllers/page')
 
-const parser = formData.parse({
-  uploadDir: os.tmpdir(),
-  autoClean: true,
-})
+const parser = multer({ dest: os.tmpdir() }).array('files')
 
 const router = express.Router()
 router.get('/', home)

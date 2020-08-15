@@ -19,7 +19,6 @@ const submitHandler = async (event) => {
     url: '/mailer',
     method: 'post',
     data,
-    headers: { 'Content-type': 'application/json' },
   }).catch(error => error)
 
   // Get status and reset form

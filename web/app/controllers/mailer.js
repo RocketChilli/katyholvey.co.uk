@@ -9,10 +9,10 @@ const controller = async (req, res) => {
   }
 
   // Add any files as attachments
-  if (req.files.files.length > 0) {
-    message.attachments = req.files.files.map(({ path, originalFilename }) => ({
-      path: Array.isArray(path) ? path[1] : path,
-      filename: Array.isArray(originalFilename) ? originalFilename[1] : originalFilename,
+  if (req.files.length > 0) {
+    message.attachments = req.files.map(file => ({
+      path: file.path,
+      filename: file.originalname,
     }))
   }
 
