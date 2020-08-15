@@ -6,7 +6,7 @@ const blog = require('./controllers/blog')
 const mailer = require('./controllers/mailer')
 const page = require('./controllers/page')
 
-const parser = multer({ dest: os.tmpdir() }).array('files')
+const parser = multer({ dest: os.tmpdir() }).array('files[]')
 
 const router = express.Router()
 router.get('/', home)

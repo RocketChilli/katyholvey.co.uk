@@ -13,7 +13,7 @@ const submitHandler = async (event, dragDrop) => {
 
   const data = new FormData(form)
   dragDrop.files.forEach((file) => {
-    data.append('files', file)
+    data.append('files[]', file)
   })
 
   const result = await axios({

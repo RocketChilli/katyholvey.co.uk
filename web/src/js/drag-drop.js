@@ -74,7 +74,6 @@ class DragDrop {
    * Show and update the file count message
    */
   update() {
-    console.log(this.picker.files.length)
     const count = this.picker.files.length + this.files.length
     this.counter.setAttribute('data-count', count)
     if (count > 0) {
