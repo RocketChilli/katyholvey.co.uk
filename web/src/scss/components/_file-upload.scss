@@ -51,7 +51,7 @@
   }
 
   &.-dragover {
-    box-shadow: 0 0 .1rem .5rem rgba($purple, .4);
+    box-shadow: 0 0 1px .5rem $shadow-purple;
 
     & > * {
       pointer-events: none;

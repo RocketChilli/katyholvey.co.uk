@@ -13,10 +13,11 @@
     padding: .8em;
     font-size: $text-sm;
     width: 100%;
+    transition: box-shadow .2s;
 
     &:focus {
       outline: 0;
-      box-shadow: 0 0 3px 3px $light-purple;
+      box-shadow: 0 0 1px 4px $shadow-purple;
     }
   }
 
