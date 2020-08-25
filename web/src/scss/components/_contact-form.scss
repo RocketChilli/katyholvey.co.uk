@@ -1,6 +1,5 @@
 .contact-form {
   columns: 2;
-  position: relative;
 
   .form-field {
     margin-bottom: 1rem;
@@ -18,7 +17,20 @@
     }
   }
 
-  .message {
+  & > footer {
+    column-span: all;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-gap: 1rem;
+  }
+
+  .file-upload {
+    margin-right: 1rem;
+    flex-grow: 1;
+  }
+
+  .status {
     position: absolute;
     z-index: 1;
     top: calc(100% + #{$grid-gutter} / 2);
@@ -37,5 +49,15 @@
 
   @media (max-width: $break-lg) {
     columns: 1;
+
+    & > footer {
+      flex-direction: column;
+
+      .file-upload {
+        width: 100%;
+        margin: 0;
+        margin-bottom: 1rem;
+      }
+    }
   }
 }
