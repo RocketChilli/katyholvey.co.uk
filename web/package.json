@@ -12,7 +12,7 @@
   "license": "UNLICENSED",
   "dependencies": {
     "@babel/core": "^7.5.5",
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "babel-loader": "^8.0.6",
     "compression": "^1.7.4",
     "copy-webpack-plugin": "^6.0.3",
